@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<IdentityRole>
+@{
+    ViewData["title"] = "Liste CheckboxList";
+}
+
+<h1>Roles</h1>
+<partial name="_RoleForm" model="new RoleFormViewModel()"></partial>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Role Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var role in Model)
+        {
+            <tr>
+                <td>@role.Id</td>
+                <td>@role.Name</td>
+                <td>
+                    <a class="btn btn-primary" asp-action="ManagePermissions" asp-route-roleId="@role.Id" >Manage Permissions</a>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial"></partial>
+}

@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "227199ca-c5b0-47dc-9bcf-632e146c6c1b": {
+      "ProjectGuid": "227199ca-c5b0-47dc-9bcf-632e146c6c1b",
+      "DisplayName": "PermissionsBasedProject",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Fichiers divers",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}

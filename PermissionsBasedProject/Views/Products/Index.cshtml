@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@inject IAuthorizationService AuthorizationService
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h1>Manage Products</h1>
+<hr />
+@if(AuthorizationService.AuthorizeAsync(User,Permissions.Products.View).Result.Succeeded)
+{
+    <a class="btn btn-primary ">View</a>
+
+}
+@if(AuthorizationService.AuthorizeAsync(User,Permissions.Products.Create).Result.Succeeded)
+{
+    <a class="btn bg-success ">Create</a>
+
+}
+@if(AuthorizationService.AuthorizeAsync(User,Permissions.Products.Update).Result.Succeeded)
+{
+    <a class="btn btn-warning ">Update</a>
+
+}
+@if(AuthorizationService.AuthorizeAsync(User,Permissions.Products.Delete).Result.Succeeded)
+{
+    <a class="btn btn-danger ">Delete</a>
+
+}
